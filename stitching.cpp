@@ -8,7 +8,7 @@
 using namespace std;
 using namespace cv;
 
-//Code is specialized for a microcontroller (i.e. Raspberry Pi)  
+//Code is specialized for a microcontroller (e.g. Raspberry Pi)  
 
 bool try_use_gpu = false; //GPU is turned off by default 
 Stitcher::Mode mode = Stitcher::PANORAMA; //Stitching mode set to 'PANORAMA' 
@@ -36,7 +36,7 @@ int main(int argc, char* argv[])
     cout << "Stitching completed successfully!" << endl;
 	
 	display = imread(result);
-	namedWindow("Panorama", WINDOW_NORMAL); //Create a window
+   	namedWindow("Panorama", WINDOW_NORMAL); //Create a window
     imshow( "Panorama", display); //Display panorama in window
     waitKey(0);
 	

@@ -11,9 +11,7 @@ This is a C++ program used to stitch images into a panorama. Uses the [cv::Stitc
 Instructions:
 ------------
 Linux:
-Makefile can be made using the command "cmake ." and the stitching file can be compiled using the "make" command.
-
-The file have to take a series of argument to input the images. Enter "./stitching filename1.jpg filename2.jpg filename3.jpg..." with 'filename' being the name of your image file.
+Makefile can be made using the command "cmake ." and the stitching file can be compiled using the "make" command. The file have to take a series of argument to input the images. Enter "./stitching filename1.jpg filename2.jpg filename3.jpg..." with 'filename' being the name of your image file.
 
 Windows:
 lol, idk pls don't ask. Download Visual Studio or something and figure it out yourself.

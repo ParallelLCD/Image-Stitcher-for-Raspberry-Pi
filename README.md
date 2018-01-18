@@ -21,7 +21,7 @@ Error Codes:
 -----------
 * 0 = OK: Images are successfully sitiched, although you won't see this error code since it's not an error.
 * 1 = ERR_NEED_MORE_IMGS: Need more images. Why are you are you using this program when you're just stitching one image you idiot.
-* 2 = ERR_HOMOGRAPHY_EST_FAIL: Images stacked on each other are not compatiable. No, you can't have your limbs in funny places with this program.	
+* 2 = ERR_HOMOGRAPHY_EST_FAIL: Images stacked on each other are not compatible. No, you can't have your limbs in funny places with this program.	
 * 3 = ERR_CAMERA_PARAMS_ADJUST_FAIL: One or more images can't decide where to be placed in the panorama. You can blame OpenCV for being stupid if you encounter this error.
 
 Known Bugs:

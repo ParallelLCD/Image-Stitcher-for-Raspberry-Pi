@@ -8,7 +8,7 @@
 using namespace std;
 using namespace cv;
 
-//Code is specialized for a microcontroller (e.g. Raspberry Pi)  
+//Code is specialized for any Raspberry Pi model  
 
 bool try_use_gpu = false; //GPU is turned off by default 
 Stitcher::Mode mode = Stitcher::PANORAMA; //Stitching mode set to 'PANORAMA' 

@@ -54,9 +54,7 @@ int getImages(int argc, char** argv)
 			return -1; //Function is exited 
         	}
         	else
-		{
-			imgs.push_back(img); //Images are stacked together 
-		}
+			imgs.push_back(img); //Images are stacked together
     	}
 	return 0;
 }

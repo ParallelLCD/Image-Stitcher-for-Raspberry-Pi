@@ -25,38 +25,38 @@ int main(int argc, char* argv[])
 	
 	Mat pan; //Stack of images is called
 	Ptr<Stitcher> stitcher = Stitcher::create(mode, try_use_gpu); //Stitcher process is created
-    Stitcher::Status status = stitcher->stitch(imgs, pan); //Stitcher is applied to the stack of images 
+    	Stitcher::Status status = stitcher->stitch(imgs, pan); //Stitcher is applied to the stack of images 
 	
-    if (status != Stitcher::OK) //Checks if error persisted during stitching process
-    {
-        cout << "Can't stitch images, error code = " << int(status) << endl; //Error code (int) can be looked in cv::Stitcher::Status document
-        return -1; //Program is exited 
-    }
-    imwrite(result, pan); //Outputs the panorama into a image file
-    cout << "Stitching completed successfully!" << endl;
+    	if (status != Stitcher::OK) //Checks if error persisted during stitching process
+    	{
+        	cout << "Can't stitch images, error code = " << int(status) << endl; //Error code (int) can be looked in cv::Stitcher::Status document
+        	return -1; //Program is exited 
+    	}
+    	imwrite(result, pan); //Outputs the panorama into a image file
+    	cout << "Stitching completed successfully!" << endl;
 	
 	display = imread(result);
    	namedWindow("Panorama", WINDOW_NORMAL); //Create a window
-    imshow( "Panorama", display); //Display panorama in window
-    waitKey(0);
+    	imshow( "Panorama", display); //Display panorama in window
+    	waitKey(0);
 	
-    return 0;
+	return 0;
 }
 
 int getImages(int argc, char** argv)
 {
-    for (int i = 1; i < argc; ++i)
-    {
+	for (int i = 1; i < argc; ++i)
+    	{
 		Mat img = imread(argv[i]); //Vector is called to stack inputed images
-        if (img.empty()) //Checks if images are in the vector
-        {
-            cout << "Can't read image '" << argv[i] << "'" << endl; //Error message if image name is invalid or does not exist
-            return -1; //Function is exited 
-        }
-        else
+        	if (img.empty()) //Checks if images are in the vector
+        	{
+			cout << "Can't read image '" << argv[i] << "'" << endl; //Error message if image name is invalid or does not exist
+			return -1; //Function is exited 
+        	}
+        	else
 		{
-            imgs.push_back(img); //Images are stacked together 
+			imgs.push_back(img); //Images are stacked together 
 		}
-    }
+    	}
 	return 0;
 }

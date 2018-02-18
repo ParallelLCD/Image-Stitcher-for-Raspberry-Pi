@@ -1,4 +1,4 @@
-# Image-Stitcher-for-Microcontrollers
+# Image-Stitcher-for-Raspberry-Pi
 
 Requirments:
 -----------
@@ -6,7 +6,7 @@ Requirments:
 
 Information:
 -----------
-This is a C++ program used to stitch images into a panorama. Uses the [cv::Stitcher](https://docs.opencv.org/3.4.0/d2/d8d/classcv_1_1Stitcher.html) class with the code being derived from the [stitching tutorial](https://docs.opencv.org/3.4.0/d8/d19/tutorial_stitcher.html) from OpenCV documentation. Code is modified to be designed for microcontrollers (e.g. Raspberry Pi), but can be compiled on any device with OpenCV installed. This is also modified to display a window after the stitching process is done.
+This is a C++ program used to stitch images into a panorama. Uses the [cv::Stitcher](https://docs.opencv.org/3.4.0/d2/d8d/classcv_1_1Stitcher.html) class with the code being derived from the [stitching tutorial](https://docs.opencv.org/3.4.0/d8/d19/tutorial_stitcher.html) from OpenCV documentation. Code is modified to be designed for any Raspberry Pi model, but can be compiled on any device with OpenCV installed. This is also modified to display a window after the stitching process is done.
 
 Instructions:
 ------------

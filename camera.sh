@@ -2,12 +2,12 @@
 #!/bin/bash
 
 i=0
-while [ $i -lt 6 ]
+while [ $i -lt 8 ]
 do
-        raspistill -w 1280 -h 720 -o $((i+1)).jpg
-        echo "Image taken!"
-        sleep 3
+        raspistill -w 320 -h 480 -o img$((i+1)).jpg
+        echo "Image "$((i+1))" taken!"
+        sleep 2
         i=$((i+1))
 done
 
-./stitching 1.jpg 2.jpg 3.jpg 4.jpg 5.jpg 6.jpg
+./stitching img*

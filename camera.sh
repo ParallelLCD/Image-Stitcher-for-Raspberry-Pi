@@ -4,7 +4,7 @@
 i=0
 while [ $i -lt 8 ]
 do
-        raspistill -w 320 -h 480 -o img$((i+1)).jpg
+        raspistill -w 480 -h 320 -o img$((i+1)).jpg
         echo "Image "$((i+1))" taken!"
         sleep 2
         i=$((i+1))

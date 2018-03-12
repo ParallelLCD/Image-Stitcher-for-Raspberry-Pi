@@ -2,9 +2,9 @@
 #!/bin/bash
 
 i=0
-while [ $i -lt 8 ]
+while [ $i -lt 6 ]
 do
-        raspistill -w 480 -h 320 -o img$((i+1)).jpg
+        raspistill -vf -hf -w 1280 -h 720 -br 45 -o img$((i+1)).jpg
         echo "Image "$((i+1))" taken!"
         sleep 2
         i=$((i+1))

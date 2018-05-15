@@ -6,7 +6,7 @@ k=-30
 while [ $i -lt 6 ]
 do
         echo "Taking Images"
-        raspistill -vf -hf -w 1280 -h 720 -br 45 -o img$((i+1)).jpg
+        raspistill -vf -hf -w 480 -h 320 -br 45 -o img$((i+1)).jpg
         echo "Image "$((i+1))" taken!"
         sleep 2
         if [ $i -eq 5 ]; then
@@ -21,7 +21,7 @@ done
 new_image=annotated.bmp
 
 echo "Converting Image from JPG to BMP"
-convert panorama.jpg -fill black -gravity Southwest -pointsize 30 -resize 'x320' $new_image
+convert panorama.jpg -fill black -gravity Southwest -pointsize 30 $new_image
 
 echo "Finding dimensions of image"
 

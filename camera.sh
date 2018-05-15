@@ -6,22 +6,23 @@ k=-30
 while [ $i -lt 6 ]
 do
         echo "Taking Images"
-        raspistill -vf -hf -w 480 -h 320 -br 45 -o img$((i+1)).jpg
+        raspistill -vf -hf -w 1280 -h 720 -br 45 -o img$((i+1)).jpg
         echo "Image "$((i+1))" taken!"
         sleep 2
         if [ $i -eq 5 ]; then
                 echo "Cropping img$((i+1))"
-                mogrify -crop 60%x+0 img$((i+1)).jpg
+                mogrify -gravity East -crop 60%x+0 img$((i+1)).jpg
         fi
         i=$((i+1))
 done
 
-./stitching img*
+./stitching img1.jpg img2.jpg img3.jpg img4.jpg img5.jpg
+convert panorama.jpg img6.jpg +append panorama.jpg
 
 new_image=annotated.bmp
 
 echo "Converting Image from JPG to BMP"
-convert panorama.jpg -fill black -gravity Southwest -pointsize 30 $new_image
+convert panorama.jpg -fill black -gravity Southwest -pointsize 30 -resize 'x320' $new_image
 
 echo "Finding dimensions of image"
 
